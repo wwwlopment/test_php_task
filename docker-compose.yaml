@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  php:
+    container_name: 'test_php_task'
+    image: php:7.4-cli
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:8000"
+    command: php -S 0.0.0.0:8000 -t /app
